@@ -189,6 +189,14 @@
         $dados = $cmd->fetchAll(PDO::FETCH_ASSOC);
         return $dados;
     }
+    public function todosdados()
+    {
+        $cmd = $this->pdo->prepare('SELECT concurso FROM tabela1');       
+       
+        $cmd->execute();
+        $dados = $cmd->fetchAll(PDO::FETCH_ASSOC);
+        return $dados;
+    }
         
 
 }
